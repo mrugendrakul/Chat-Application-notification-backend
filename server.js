@@ -9,7 +9,7 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 
-const serviceAccount = require('./lockntalk-firebase-adminsdk-bsz1u-098b5e841e.json')
+// const serviceAccount = require('./lockntalk-firebase-adminsdk-bsz1u-098b5e841e.json')
 
 // const { getFirestore, connectFirestoreEmulator } =require( "firebase/firestore");
 // const sendNotificationToDevice = require('./sendNotification.js');
@@ -71,5 +71,5 @@ app.post('/sendnotfi', (req, res) => {
 
 app.listen(7000, () => {
     console.log("Server started on port : 7000");
-    console.log(`Project id : ${serviceAccount.project_id}`)
+    console.log(`Project id : ${process.env.FIREBASE_PROJECT_ID}`)
 })  
