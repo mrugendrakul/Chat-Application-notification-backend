@@ -69,7 +69,7 @@ app.post('/sendnotfi', (req, res) => {
 
 })
 
-app.listen(7000, () => {
+app.listen(10000, () => {
     console.log("Server started on port : 7000");
     console.log(`Project id : ${process.env.FIREBASE_PROJECT_ID}`)
 })  
